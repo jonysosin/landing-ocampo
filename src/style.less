@@ -1,0 +1,169 @@
+@import './_mixin';
+
+body {
+  .container-carousel {
+    position: relative;
+
+    &:hover {
+      .owl-nav {
+        opacity: 1;
+      }
+    }
+
+    .item {
+      background-size: cover;
+      height: 100%;
+      min-height: 700px;
+
+      .emprendimiento-descripcion {
+        font-family: Roboto;
+        padding: 0 100px;
+        display: table;
+        position: absolute;
+        top: 50%;
+        color: white;
+        .translate(0, -50%);
+
+        .title,
+        .description {
+          display: inline-block;
+          width: 49%;
+        }
+
+        .description {
+          display: table-cell;
+          height: 100%;
+          text-transform: uppercase;
+          font-weight: 100;
+        }
+
+        .title {
+          text-transform: uppercase;
+          display: table-cell;
+          vertical-align: middle;
+          font-family: 'Barlow Condensed';
+          font-size: 80px;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .owl-nav {
+      left: 50%;
+      margin: 0 auto;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      width: 99%;
+      .translate(-50%, -50%);
+
+      .owl-prev,
+      .owl-next {
+        display: inline-block;
+        font-size: 0;
+        padding: 10px;
+
+        &:before {
+          background: url(../images/left.png) center no-repeat;
+          background-size: cover;
+          content: '';
+          display: inline-block;
+          height: 40px;
+          width: 25px;
+        }
+      }
+
+      .owl-prev {
+        float: left;
+      }
+
+      .owl-next {
+        float: right;
+
+        &:before {
+          background: url(../images/right.png) center no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+
+    .header-content {
+      .logo {
+        left: 50%;
+        margin-top: 10px;
+        position: relative;
+        width: 250px;
+        z-index: 100;
+        .translate(-50%);
+      }
+    }
+  }
+
+  .container-static-slogan {
+    background: black;
+    text-align: center;
+    padding: 10px 0;
+
+    span {
+      color: white;
+      text-align: center;
+      font-family: Roboto;
+    }
+  }
+
+  .container-buttons {
+    background: #333333;
+    padding-bottom: 10px;
+
+    ul {
+      margin: 0 auto;
+      text-align: center;
+
+        li {
+          color: #333333;
+          display: inline-block;
+          list-style: none;
+          max-width: 33%;
+          padding-right: 10%;
+          -webkit-transition: 0.2s;
+          text-align: center;
+          .transition(0.2s);
+
+          .icon {
+            font-size: 90px;
+            display: table-cell;
+            height: 100%;
+            padding-right: 0;
+            margin-right: 0;
+          }
+
+          &:hover {
+            color: #afafaf;
+          }
+
+          .link-desc {
+            width: 49%;
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 30px;
+            text-transform: uppercase;
+          }
+          
+          span {
+            text-align: left;
+            font-family: 'Barlow Condensed';
+            display: block;
+          }
+
+          .link-item {
+            color: #39bb9d;
+            text-decoration: none;
+            display: table;
+          }
+        }
+    }
+  }
+}

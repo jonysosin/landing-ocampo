@@ -1,0 +1,16 @@
+{
+  "name": "landing-ocampo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonathan Sosin",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0",
+    "owl.carousel": "^2.2.0"
+  }
+}
